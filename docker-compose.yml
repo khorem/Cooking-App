@@ -1,0 +1,30 @@
+services:
+  api:
+    build: ./api
+    container_name: cooking_api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://localhost:5433/cooking_app
+
+  db:
+    image: postgres:15
+    container_name: cooking_db
+    environment:
+      POSTGRES_USER: khorem
+      POSTGRES_PASSWORD: khorem
+      POSTGRES_DB: cooking_app
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5433:5432"
+
+  frontend:
+    build: ./frontend
+    container_name: cooking_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api

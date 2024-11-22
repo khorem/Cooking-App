@@ -1,0 +1,14 @@
+/*{
+  "name": "Cooking App Dev Container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "api",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "pip install -r requirements.txt",
+  "mounts": [
+    "source=${localWorkspaceFolder}/api,target=/workspace,type=bind"
+  ],
+  "remoteUser": "root"
+}*/
+
+  
