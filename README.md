@@ -3,7 +3,7 @@
 Application de gestion de recettes de cuisine avec des fonctionnalités comme l'authentification, la gestion des utilisateurs et la création de recettes.
 
 ## Binôme
-Khorem KANHO
+Khorem KANHO et Harry AHEHEHINNOU
 
 ### Fonctionnalités
 - **Authentification JWT** : Connexion sécurisée avec des tokens.
